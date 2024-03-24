@@ -1,5 +1,5 @@
 import z from "zod";
-
+//zod validation
 export const signupInput = z.object({
     username: z.string().email(),
     password: z.string().min(6),
