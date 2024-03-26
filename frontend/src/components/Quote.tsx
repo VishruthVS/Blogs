@@ -7,7 +7,7 @@ export const Quote = () => {
                     "The customer support I received was exceptional. The support team went above and beyond to address my concerns"
                 </div>
                 <div className="max-w-md text-xl font-semibold text-left mt-4">
-                    Julies Winfield
+                    Julies Winfield || Vishruth VS
                 </div>
                 <div className="max-w-md text-sm font-light text-slate-400">
                     CEO | Acme corp
