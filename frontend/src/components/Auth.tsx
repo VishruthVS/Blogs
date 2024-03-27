@@ -1,9 +1,9 @@
+import axios from "axios";
 import { ChangeEvent, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { SignupInput } from "@100xdevs/medium-common";
-import axios from "axios";
+import { SignupInput } from "vishruth-medium-common";
 import { BACKEND_URL } from "../config";
-
+//trpc
 export const Auth = ({ type }: { type: "signup" | "signin" }) => {
     const navigate = useNavigate();
     const [postInputs, setPostInputs] = useState<SignupInput>({
