@@ -109,6 +109,7 @@ blogRouter.get('/bulk', async (c) => {
       }
     }
   });
+  console.log("test");
   return c.json({
     blogs
   })
