@@ -40,22 +40,15 @@ export const useBlogs = () => {
 
     useEffect(() => {
         axios.get(`${BACKEND_URL}/api/v1/blog/bulk`, {
-            method: "GET",
             headers: {
-                "Authorization": "Bearer " + localStorage.getItem("token")
+                Authorization: localStorage.getItem("token")
             }
         })
             .then(response => {
-                setBlogs(response.data);
+                setBlogs(response.data.blogs);
                 setLoading(false);
             })
-            .catch(error => {
-                console.error("Error fetching blogs:", error);
-                setLoading(false); // make sure to handle errors by setting loading state to false
-            });
     }, [])
-
-
 
     return {
         loading,
