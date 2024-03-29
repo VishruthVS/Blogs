@@ -136,7 +136,7 @@ blogRouter.get('/:id', async (c) => {
 
   });
 
-  return c.json({ "blog get route": blog });
+  return c.json({ blog: blog });
 
 
 })
