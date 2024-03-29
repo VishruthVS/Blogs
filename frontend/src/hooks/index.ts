@@ -41,7 +41,9 @@ export const useBlogs = () => {
     useEffect(() => {
         axios.get(`${BACKEND_URL}/api/v1/blog/bulk`, {
             headers: {
-                Authorization: localStorage.getItem("token")
+                // Authorization: localStorage.getItem("token")
+                Authorization:
+                    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjF9.nnvhtOJr9BAhG7XejuEu6zz9p0KqeptgV1hMEXe1Sac",
             }
         })
             .then(response => {
