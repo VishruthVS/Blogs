@@ -43,13 +43,17 @@ export const useBlogs = () => {
             method: "GET",
 
             headers: {
-                Authorization: "Bearer" + localStorage.getItem("token")
+                "Authorization": "Bearer" + localStorage.getItem("token")
             }
         })
             .then(response => {
-                setBlogs(response.data.blogs);
+                setBlogs(response.data);
                 setLoading(false);
             })
+            .catch(error => {
+                console.error("Error fetching blogs:", error);
+                setLoading(false); // make sure to handle errors by setting loading state to false
+            });
     }, [])
 
     return {
