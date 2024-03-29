@@ -54,7 +54,7 @@ blogRouter.post('/', async (c) => {
     }
   });
 
-  return c.json({ "blog route": blog.id });
+  return c.json({ id: blog.id });
 })
 
 blogRouter.put('/', async (c) => {
@@ -83,7 +83,7 @@ blogRouter.put('/', async (c) => {
       }
     });
 
-    return c.json({ "blog put route": blog.id });
+    return c.json({ id: blog.id });
   }
   catch (e) {
     console.log(e);
