@@ -41,9 +41,8 @@ export const useBlogs = () => {
     useEffect(() => {
         axios.get(`${BACKEND_URL}/api/v1/blog/bulk`, {
             method: "GET",
-
             headers: {
-                "Authorization": "Bearer" + localStorage.getItem("token")
+                "Authorization": "Bearer " + localStorage.getItem("token")
             }
         })
             .then(response => {
@@ -55,6 +54,8 @@ export const useBlogs = () => {
                 setLoading(false); // make sure to handle errors by setting loading state to false
             });
     }, [])
+
+
 
     return {
         loading,
